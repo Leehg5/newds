@@ -17,8 +17,11 @@ const Navbar = () => {
   const [BoardText, setBoardText] = useState("");
   const [deleteListsd, setDeleteListsd] = useState();
   const [serComment, setSerComment] = useState("");
+  const [error, setError] = useState("");
+  const [error1, setError1] = useState("");
 
   const deleteList = async () => {
+    
     const response = await axios.get(
       `${BACK_URL}board/1/2/searchAll?value=${gggg}`
     );
@@ -166,6 +169,7 @@ const Navbar = () => {
                       <p class="py-4">
                         <div>
                           <div className="Login_input">
+                            아이디
                             <input
                               className="loginId"
                               type="text"
@@ -176,6 +180,7 @@ const Navbar = () => {
                             />
                           </div>
                           <div className="Login_input1">
+                            비밀번호
                             <input
                               className="loginPw"
                               type="password"
@@ -184,10 +189,12 @@ const Navbar = () => {
                                 setPassword(e.target.value);
                               }}
                             />
+                             {error1 && <div style={{ color: "red" }}>{error1}</div>}
+                                 {error && <div style={{ color: "red" }}>{error}</div>}
+            <br />
                           </div>
                           <div className="loginMid"></div>
-                          <div className="autoLogin">아이디/비밀번호 찾기</div>
-                          <label
+                                <button
                             type="submit"
                             className="loginBtn"
                             for="my-modal-1"
@@ -201,18 +208,33 @@ const Navbar = () => {
                               setName(lonned.data.username);
 
                               setId(lonned.data.userId);
+
+                                 if (password.length < 8) {
+                  setError("비밀번호가 8자 이상으로 입력해주세요");
+                  return;
+                }
+                else if (!userId || userId.length < 5 || userId.length > 12) {
+                  // userid is invalid
+                  setError1("아이디는 5~12자 이내로 입력해주세요.");
+                  return;
+                }
+                              
                               if (lonned.data.aboolean == true) {
                                 setLonned(lonned.data);
                                 setLonned(lonned.data.aboolean);
                                 setTimeout(() => {});
                                 alert("로그인 성공");
-                                window.location.reload();
+                           
                               } else if (lonned.data.aboolean == false) {
                                 setLonned(lonned.data.userName);
                                 alert(
                                   "입력하신 정보를 다시한번 확인하여주세요."
                                 );
                               }
+
+                                   setError1("");
+ setError("");
+                              console.log(lonned);
                               sessionStorage.setItem(
                                 "logined",
                                 lonned.data.userName
@@ -225,11 +247,13 @@ const Navbar = () => {
                                 "userid",
                                 lonned.data.userId
                               );
-                              sessionStorage.setItem("role", lonned.data.role);
                             }}
                           >
-                            로그인
-                          </label>
+                            {" "}
+                            로그인{" "}
+                          </button>
+                          <div className="autoLogin">아이디/비밀번호 찾기</div>
+                    
                         </div>
                         <div className="socialBox">
                           <div className="kakao">
@@ -267,7 +291,7 @@ const Navbar = () => {
 
                 <SignUp />
               </div>
-            )}
+            )}{" "}
           </div>
         </div>
       </div>

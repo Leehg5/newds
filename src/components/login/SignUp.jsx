@@ -79,7 +79,7 @@ const SignUp = () => {
 
         <div className="SigUp_input">
             <div>
-              닉네임 
+              이름 or 닉네임 
               <input
               class="sdasds343"
                 type="text"
@@ -224,9 +224,9 @@ const SignUp = () => {
                   setError1("아이디는 영문과 숫자만 사용 가능합니다.");
                   return;
                 }
-                else if (!userName || userName.length < 4 || userName.length > 12) {
+                else if (!userName || userName.length < 3 || userName.length > 12) {
                   // userid is invalid
-                  setError2("닉네임 4~12자 이내로 입력해주세요.");
+                  setError2("이름 또는 닉네임 3~12자 이내로 입력해주세요.");
                   return;
                 }
 
@@ -234,7 +234,7 @@ const SignUp = () => {
 
                 // userid is valid
                 setError1("");
-
+ setError2("");
                 registerd();
                 console.log(userId, password, userName, confirmPassword);
               }}>

@@ -213,18 +213,18 @@ const SignUp = () => {
                   return;
                 }
 
-                if (!userId || userId.length < 5 || userId.length > 12) {
+                else if (!userId || userId.length < 5 || userId.length > 12) {
                   // userid is invalid
                   setError1("아이디는 5~12자 이내로 입력해주세요.");
                   return;
                 }
 
-                if (!/^[a-zA-Z0-9]+$/.test(userId)) {
+                else if (!/^[a-zA-Z0-9]+$/.test(userId)) {
                   // userid is invalid
                   setError1("아이디는 영문과 숫자만 사용 가능합니다.");
                   return;
                 }
-                if (!userName || userName.length < 4 || userName.length > 12) {
+                else if (!userName || userName.length < 4 || userName.length > 12) {
                   // userid is invalid
                   setError2("닉네임 4~12자 이내로 입력해주세요.");
                   return;

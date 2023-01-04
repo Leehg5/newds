@@ -204,31 +204,35 @@ const SignUp = () => {
           <div className="SignUpbutton1">
             <button
               onClick={() => {
-                if (password !== confirmPassword) {
-                  setError("비밀번호가 일치하지 않습니다.");
-                  return;
-                }
-                else if (password.length < 8) {
-                  setError("비밀번호가 8자 이상으로 입력해주세요");
-                  return;
-                }
 
-                else if (!userId || userId.length < 5 || userId.length > 12) {
+                
+                 if (!userId || userId.length < 5 || userId.length > 12) {
                   // userid is invalid
                   setError1("아이디는 5~12자 이내로 입력해주세요.");
-                  return;
+                 
                 }
-
-                else if (!/^[a-zA-Z0-9]+$/.test(userId)) {
-                  // userid is invalid
-                  setError1("아이디는 영문과 숫자만 사용 가능합니다.");
-                  return;
+                if (password.length < 8) {
+                  setError("비밀번호가 8자 이상으로 입력해주세요");
+                  
                 }
-                else if (!userName || userName.length < 3 || userName.length > 12) {
+                   if (!userName || userName.length < 3 || userName.length > 12) {
                   // userid is invalid
                   setError2("이름 또는 닉네임 3~12자 이내로 입력해주세요.");
                   return;
                 }
+
+                if (!/^[a-zA-Z0-9]+$/.test(userId)) {
+                  // userid is invalid
+                  setError1("아이디는 영문과 숫자만 사용 가능합니다.");
+                  return;
+                }
+                if (password !== confirmPassword) {
+                  setError("비밀번호가 일치하지 않습니다.");
+                  return;
+                }
+                
+
+             
 
                 // check if userid already exists
 

@@ -178,6 +178,8 @@ const Navbar = () => {
                                 setUserId(e.target.value);
                               }}
                             />
+                                                  {error1 && <div style={{ color: "red" }}>{error1}</div>}
+                                                  <br />
                           </div>
                           <div className="Login_input1">
                             비밀번호
@@ -189,8 +191,9 @@ const Navbar = () => {
                                 setPassword(e.target.value);
                               }}
                             />
-                             {error1 && <div style={{ color: "red" }}>{error1}</div>}
-                                 {error && <div style={{ color: "red" }}>{error}</div>}
+                             {error && <div style={{ color: "red" }}>{error}</div>}
+       
+                                
             <br />
                           </div>
                           <div className="loginMid"></div>
@@ -208,16 +211,20 @@ const Navbar = () => {
                               setName(lonned.data.username);
 
                               setId(lonned.data.userId);
-
+   if (!userId || userId.length < 5 || userId.length > 12) {
+                  // userid is invalid
+                                       
+                  setError1("아이디는 5~12자 이내로 입력해주세요.");
+            
+  
+                
+                }
                                  if (password.length < 8) {
                   setError("비밀번호가 8자 이상으로 입력해주세요");
+        
                   return;
                 }
-                else if (!userId || userId.length < 5 || userId.length > 12) {
-                  // userid is invalid
-                  setError1("아이디는 5~12자 이내로 입력해주세요.");
-                  return;
-                }
+              
                               
                               if (lonned.data.aboolean == true) {
                                 setLonned(lonned.data);
@@ -230,10 +237,11 @@ const Navbar = () => {
                                 alert(
                                   "입력하신 정보를 다시한번 확인하여주세요."
                                 );
+                                      sessionStorage.clear();
                               }
-
-                                   setError1("");
  setError("");
+                                   setError1("");
+
                               console.log(lonned);
                               sessionStorage.setItem(
                                 "logined",

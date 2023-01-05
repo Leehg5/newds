@@ -211,15 +211,15 @@ const Navbar = () => {
                               setName(lonned.data.username);
 
                               setId(lonned.data.userId);
-   if (!userId || userId.length < 5 || userId.length > 12) {
+   if (!userId || userId.length < 5 || userId.length > 12 ) {
                   // userid is invalid
                                        
                   setError1("아이디는 5~12자 이내로 입력해주세요.");
             
-  
+      return;
                 
                 }
-                                 if (password.length < 8) {
+                                 if (password.length < 8 ) {
                   setError("비밀번호가 8자 이상으로 입력해주세요");
         
                   return;

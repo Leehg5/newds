@@ -12,7 +12,7 @@ const SignUp = () => {
   const [error, setError] = useState("");
   const [error1, setError1] = useState("");
    const [error2, setError2] = useState("");
-
+  
     const [checkedItems, setCheckedItems] = useState({
     fruit1: false,
     fruit2: false,
@@ -35,7 +35,6 @@ const SignUp = () => {
       fruit4: event.target.checked,
     });
   };
-  
   
 
 
@@ -204,22 +203,22 @@ const SignUp = () => {
           <div className="SignUpbutton1">
             <button
               onClick={() => {
-
+         if (!userName || userName.length < 3 || userName.length > 12) {
+                  // userid is invalid
+                  setError2("이름 또는 닉네임 3~12자 이내로 입력해주세요.");
+                               return;
+                }
                 
                  if (!userId || userId.length < 5 || userId.length > 12) {
                   // userid is invalid
                   setError1("아이디는 5~12자 이내로 입력해주세요.");
-                 
+                               return;
                 }
-                if (password.length < 8) {
+                 if (password.length < 8) {
                   setError("비밀번호가 8자 이상으로 입력해주세요");
-                  
+                     return;
                 }
-                   if (!userName || userName.length < 3 || userName.length > 12) {
-                  // userid is invalid
-                  setError2("이름 또는 닉네임 3~12자 이내로 입력해주세요.");
-                  return;
-                }
+          
 
                 if (!/^[a-zA-Z0-9]+$/.test(userId)) {
                   // userid is invalid

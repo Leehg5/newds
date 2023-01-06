@@ -141,80 +141,7 @@ body {
   }
 }
 
-.navbar {
-  border-bottom: 0.5px solid rgb(231, 228, 228);
-  display: flex;
-  align-items: center;
-  height:70px;  font-size: 14px;
-  color: #555;
-  font-weight: bold;
-  text-align: center;
-  background-color: #212529;
-  color: #868e96;
 
-
-  .Heder_Loging_button {
-    border: none;
-  }
-
-  .wrapper {
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-width: 100%;
-
-    height: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-
-
-    .items {
-
-      display: flex;
-      align-items: center;
-
-      .item {
-
-        display: flex;
-
-        font-size: 18px;
-        align-items: center;
-
-        .icon {
-                 
-          font-size: 20px;
-        }
-      }
-    }
-  }
-}
-.search1 {
-
-  input {
-    margin: 5px 0px 0px 10px;
-    text-align: center;
-    align-items: center;
-    background-color: #212529;
-    
-  }
-}
-.Hader_Login1 {
-width:100%;
-
-  ;
-  display: flex;
-  align-items: center;
-    
-.Login{
-padding: 0px 20px 0px 90px;
-}
-.SignUp{
-padding: 0px 20px 0px 30px;
-
-}
-}
 
 .Login {
   width: 100%;
@@ -222,15 +149,13 @@ padding: 0px 20px 0px 30px;
 
 }
 
-.text-lg {
-  text-align: center;
-}
+
 
 p {
   .Login_input1 {
 
     margin-top: 10px;
-  text-align: center;
+  text-align: left;
     margin-bottom: 20px;
 
 
@@ -238,159 +163,95 @@ p {
   .Login_input {
     margin-top: 30px;
 
-  text-align: center;
-    margin-bottom: 20px;
+  text-align: left;
+    margin-bottom: 30px;
   
 
 
   }
 
   .loginId {
-  text-align: center;
-    margin-top: 10px;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 40px;
-    border-radius: 5px;
-  border: 1px solid #e6e3e3;
-
+width: 100%;
+margin-top:20px;
+    padding: 20px;
+    height: 50px;
+    border-radius: 4px 4px 0px 0px;
+        border: 1px solid #e6e3e3;
   }
   .loginPw {
-  text-align: center;
-    margin-top: 10px;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 40px;
-    border-radius: 5px;
-  border: 1px solid #e6e3e3;
+width: 100%;
+margin-top:20px;
+    padding: 20px;
+    height: 50px;
+    border-radius: 4px 4px 0px 0px;
+        border: 1px solid #e6e3e3;
 
   }
 
   .loginBtn {
+  border-color: #9a62e6;
+    background-color: #9a62e6;
+    margin: 20px 0;
     width: 100%;
-    font-size: 14px;
-    padding: 20px 30px;
-    align-items: center;
-    line-height: 1px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    border-style: none;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+
+
   }
 }
 .modal {
   .modal-box {
+    
     padding: 40px;
   }
 }
 
-.socialBox {
-  margin-bottom: 30px;
-  .kakao {
-    background-color: #feec34;
-    border-color: #feec34;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    .kakaoLogo {
-      width: 24px;
-      height: 25px;
-    }
-    .kakaoText {
-      width: 300px;
-      font-size: 15px;
-      text-align: center;
-      display: inline-block;
-      box-sizing: border-box;
-    }
-  }
+
+.kakao {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px 0px 0px;
 }
-
-.socialBox {
-  margin-bottom: 20px;
-  .Google {
-    background-color: white;
-    height: 40px;
-    display: flex;
-    border: 1px solid #dcdcdc;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    margin-top: 10px;
-
-    .GoogleLogo {
-      width: 24px;
-      height: 25px;
-    }
-    .GoogleText {
-      width: 300px;
-      font-size: 15px;
-      text-align: center;
-      display: inline-block;
-      box-sizing: border-box;
-    }
-  }
-
-  .kakao {
-    background-color: #feec34;
-    border-color: #feec34;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    border-radius: 3px;
-
-    .kakaoLogo {
-      width: 24px;
-      height: 25px;
-    }
-    .kakaoText {
-      width: 300px;
-      font-size: 15px;
-      text-align: center;
-      display: inline-block;
-      box-sizing: border-box;
-    }
-  }
-
-  .facebook {
-    background-color: #3880ce;
-    border-color: #21538a;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
-    color: #fff;
-    border-radius: 3px;
-    > .facebookText {
-      padding-top: 12px;
-      width: 310px;
-      color: #fff;
-      font-size: 15px;
-      text-align: center;
-      box-sizing: border-box;
-    }
-    .facebookLogo {
-      padding-top: 7px;
-      width: 24px;
-      align-items: center;
-      margin-left: 7px;
-      height: 30px;
-    }
-  }
+.facebook {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px 0px 0px;
 }
+.Google {
+  display: flex;
+  align-items: center;
+}
+.kakaoLogo {
+  width: 40px;
+  border-radius: 50%;
+}
+.facebookLogo {
+  width: 40px;
+  border-radius: 50%;
+}
+.GoogleLogo {
+  width: 40px;
+  border-radius: 50%;
+}
+.socialBox {
+  padding:40px;
+  display:flex;
+margin:0 auto;
+
+}
+.socialBox1{
+
+  margin:0 auto;
+  display:flex;
+}  
 
 .autoLogin {
+  
   text-align: center;
-  margin-bottom: 20px;
+
 }
 .loginLine {
   text-align: center;
@@ -566,4 +427,82 @@ padding: 0px 0px 0px 80px
 
 .navbar_span :hover {
   color: white;
+}
+
+
+///////////////////////////////
+/// 
+/// 
+/// 
+/// 
+/// 
+/// 
+/// 
+/// 
+/// 
+/// 
+.navbar {
+border : 1px solid;
+border-bottom: 0.5px solid rgb(231, 228, 228);
+  display: flex;
+  align-items: center;
+  height:70px;  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+  text-align: center;
+  background-color: #212529;
+  color: #868e96;
+
+
+  .Heder_Loging_button {
+    border: none;
+  }
+
+  .wrapper {
+
+    display: flex;
+
+
+    margin-left: auto;
+    margin-right: auto;
+
+
+  
+  }
+}
+.search1 {
+
+  input {
+    margin: 5px 0px 0px 10px;
+    text-align: center;
+    align-items: center;
+    background-color: #212529;
+    margin-right:10px;
+  }
+}
+.Hader_Login1 {
+width:100%;
+
+
+  display: flex;
+  align-items: center;
+    
+.Login{
+  width:100px;
+
+
+}
+.SignUp{
+padding: 0px 0px 0px 20px;
+
+}
+}
+
+
+
+.font-bold{
+    font-weight: 700;
+    color: black;
+    text-align: left;
+    font-size: 22px;
 }

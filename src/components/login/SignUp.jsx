@@ -72,8 +72,8 @@ const SignUp = () => {
       <input type="checkbox" id="my-modal" class="modal-toggle" />
       <div class="modal">
         <div class="modal-box">
-          <h3 class="font-bold text-lg">회원가입</h3>
-          <AccountCircleIcon sx={{ fontSize: 70, marginTop: "20px" }} />
+          <h3 class="font">회원가입</h3>
+
     <p class="py-4"> 
 
         <div className="SigUp_input">
@@ -83,7 +83,7 @@ const SignUp = () => {
               class="sdasds343"
                 type="text"
                 name="userId"
-                placeholder="닉네임를 입력해주세요"
+                placeholder="이름 or 닉네임 을 입력해주세요"
                 value={userName}
                 onChange={(event) => setUserName(event.target.value)}
               />
@@ -120,7 +120,7 @@ const SignUp = () => {
               />
             </div>
             <br />
-            <div>
+    <div className="SigUp_input">
               비밀번호 재입력 
               <input
                      class="sdasds343"

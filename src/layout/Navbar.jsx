@@ -137,7 +137,7 @@ const Navbar = () => {
                   <Link to="/Privacy">{check}</Link>
                 </span>
 
-                <span className="navbar_span1">님</span>
+                <span className="navbar_span1"> 님</span>
                 <button
                   className="LoginNamedaci"
                   onClick={() => {
@@ -165,7 +165,7 @@ const Navbar = () => {
                         ✕
                       </label>
 
-                      <h1 class="text-lg font-bold">로그인 페이지</h1>
+                      <h1 class="font-bold">로그인 페이지</h1>
                       <p class="py-4">
                         <div>
                           <div className="Login_input">
@@ -263,35 +263,38 @@ const Navbar = () => {
                           <div className="autoLogin">아이디/비밀번호 찾기</div>
                     
                         </div>
-                        <div className="socialBox">
-                          <div className="kakao">
-                            <img
-                              className="kakaoLogo"
-                              src="https://t1.daumcdn.net/cfile/tistory/99DD44345F33780309"
-                            />
-                            <div className="kakaoText">
-                              <a href="">카카오 계정으로 신규가입</a>
-                            </div>
-                          </div>
-                          <div className="facebook">
-                            <img
-                              className="facebookLogo"
-                              src="https://cdn.icon-icons.com/icons2/1826/PNG/512/4202110facebooklogosocialsocialmedia-115707_115594.png"
-                            />
-                            <div className="facebookText">
-                              <a href="">페이스북 계정으로 신규가입</a>
-                            </div>
-                          </div>
-                          <div className="Google">
-                            <img
-                              className="GoogleLogo"
-                              src="http://asq.kr/y7pd84Th"
-                            />
-                            <div className="GoogleText">
-                              <a href="">구글 계정으로 신규가입</a>
-                            </div>
-                          </div>
-                        </div>
+                         
+        <div className="socialBox">
+          <div className="socialBox1">
+            <div className="kakao">
+              <a href="">
+                <img
+                  className="kakaoLogo"
+                  src="https://t1.daumcdn.net/cfile/tistory/99DD44345F33780309"
+                />
+              </a>
+              <div className="kakaoText"></div>
+            </div>
+            <div className="facebook">
+              <a href="">
+                <img
+                  className="facebookLogo"
+                  src="https://cdn.icon-icons.com/icons2/1826/PNG/512/4202110facebooklogosocialsocialmedia-115707_115594.png"
+                />
+              </a>
+              <div className="facebookText"></div>
+            </div>
+            <a href="">
+              <div className="Google">
+                <img className="GoogleLogo" src="http://asq.kr/y7pd84Th" />
+                <div className="GoogleText"></div>
+              </div>
+              
+            </a>
+          </div>
+          
+        </div>
+               <div className="asdaskjdha">SNS계정으로 간편 로그인</div>
                       </p>
                     </div>
                   </div>
